@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AppContainer } from './App.styled'
+import { AppContainer } from './App.styled';
 import Section from '../Section/Section';
 import Statistics from '../Statistics/Statistics';
 import Notification from '../Notification/Notification';
