@@ -1,33 +1,30 @@
-import { StatisticsBox } from './Statistics.styled';
-import { Text } from './Statistics.styled';
-import { Number } from './Statistics.styled';
+import React from 'react';
+import { StatisticsBox, Text, Number } from './Statistics.styled';
 
-export const Statistics = ({
-  good,
-  neutral,
-  bad,
-  total,
-  positivePercentage,
-}) => {
-  return (
-    <StatisticsBox>
-      <Text>
-        Good: <Number>{good}</Number>
-      </Text>
-      <Text>
-        Neutral: <Number>{neutral}</Number>
-      </Text>
-      <Text>
-        Bad: <Number>{bad}</Number>
-      </Text>
-      <Text>
-        Total: <Number>{total}</Number>
-      </Text>
-      <Text>
-        Positive Feedback: <Number>{positivePercentage}%</Number>
-      </Text>
-    </StatisticsBox>
-  );
-};
+class Statistics extends React.Component {
+  render() {
+    const { good, neutral, bad, total, positivePercentage } = this.props;
+
+    return (
+      <StatisticsBox>
+        <Text>
+          Good: <Number>{good}</Number>
+        </Text>
+        <Text>
+          Neutral: <Number>{neutral}</Number>
+        </Text>
+        <Text>
+          Bad: <Number>{bad}</Number>
+        </Text>
+        <Text>
+          Total: <Number>{total}</Number>
+        </Text>
+        <Text>
+          Positive Feedback: <Number>{positivePercentage}%</Number>
+        </Text>
+      </StatisticsBox>
+    );
+  }
+}
 
 export default Statistics;
